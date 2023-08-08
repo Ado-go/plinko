@@ -1,0 +1,28 @@
+canvas{
+    background-color: black;
+}
+
+#container{
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#settings{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.settingItem{
+    margin-left: 50px;
+}
+
+#credit{
+    position: absolute;
+}
+
+#toggleAutoPlay{
+    width: 50px;
+}
