@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plinko</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon/plinko_favicon.ico" />
+  </head>
+  <body>
+    <div id="container">
+      <canvas width="800" , height="600" id="canvas"></canvas>
+    </div>
+
+    <p id="credit">Credit:</p>
+
+    <div id="settings">
+      <div class="settingItem" id="ballCostContainer">
+        <p>Ball price:</p>
+        <input id="ballCost" type="number" value="1" min="1" max="1000" />
+      </div>
+
+      <div class="settingItem" id="autoPlayContainer">
+        <p>Autoplay:</p>
+        <input
+          id="numberOFAutoplay"
+          type="number"
+          value="0"
+          min="0"
+          max="10000"
+        />
+        <button id="toggleAutoPlay">►</button>
+      </div>
+
+      <div class="settingItem" id="riskContainer">
+        <p>Risk:</p>
+        <form>
+          <select id="riskInput" name="riskOption">
+            <option value="2">High</option>
+            <option value="1">Normal</option>
+            <option value="0" selected>Low</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="settingItem" id="rowsContainer">
+        <p>Lines:</p>
+        <form>
+          <select id="rowsInput" name="rowsOption">
+            <option value="14">14</option>
+            <option value="12">12</option>
+            <option value="10">10</option>
+            <option value="8" selected>8</option>
+          </select>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="js/vector.js"></script>
+  <script src="js/record.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/soundBoard.js"></script>
+  <script src="js/ball.js"></script>
+  <script src="js/peg.js"></script>
+  <script src="js/basket.js"></script>
+  <script src="js/plinko.js"></script>
+  <script src="js/app.js"></script>
+</html>
