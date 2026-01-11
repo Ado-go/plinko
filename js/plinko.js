@@ -104,7 +104,7 @@ class Plinko {
     );
     this.balls.push(newBall);
     this.total -= parseFloat(this.ballCostInput.value);
-    this.credit.innerText = "Credit: " + this.total;
+    this.credit.innerText = "Credit: " + parseFloat(this.total.toFixed(2));
 
     return true;
   }
