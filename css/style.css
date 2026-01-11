@@ -1,21 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 canvas {
   background-color: black;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #container {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 #settings {
-  min-width: 456px;
   display: flex;
-  gap: 40px;
+  gap: 10px;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  max-width: 100%;
 }
 
 #toggleAutoPlay {
   width: 50px;
+}
+
+@media (max-width: 768px) {
+  #container {
+    padding: 5px;
+  }
+
+  #settings {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .settingItem {
+    font-size: 12px;
+  }
+
+  .settingItem input,
+  .settingItem select {
+    width: 60px;
+    font-size: 12px;
+  }
 }
