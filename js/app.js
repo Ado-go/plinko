@@ -6,9 +6,16 @@ let toggleAutoPlay = document.getElementById("toggleAutoPlay");
 let riskInput = document.getElementById("riskInput");
 let rowsInput = document.getElementById("rowsInput");
 let ctx = canvas.getContext("2d");
+
+const containerWidth = parseInt(
+  getComputedStyle(document.getElementById("container")).maxWidth
+);
+canvas.width = containerWidth - 20;
+canvas.height = canvas.width;
+
 let game = new Plinko(
-  canvas.clientWidth,
-  canvas.clientHeight,
+  canvas.width,
+  canvas.height,
   ctx,
   credit,
   ballCost,
