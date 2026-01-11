@@ -157,20 +157,26 @@ class Plinko {
 
   setBasketMultiplier() {
     let multipliers = [];
-    let riskSettings = {
-      0: [3 * this.rows, 3],
-      1: [8 * this.rows, 4],
-      2: [12 * this.rows, 6],
-    };
-    let gameDificulty = riskSettings[this.risk];
-    let start = gameDificulty[0];
-    for (let i = 0; i < Math.round((this.rows + 1) / 2); i++) {
-      start = parseFloat(start.toFixed(1));
-      multipliers.push(start);
-      start /= gameDificulty[1];
-    }
-    for (let j = multipliers.length - 2; j >= 0; j--) {
-      multipliers.push(multipliers[j]);
+    let difficulty = [1, 0.5, 0.34];
+    let difficultyMult = difficulty[this.risk];
+    let incrementSpeed = [0.4, 0.8, 1.2];
+    let increment = 0.4;
+    let nextIncrement = 0;
+    for (let i = 0; i < Math.floor(this.rows / 2) + 1; i++) {
+      if (i == 0) {
+        multipliers.push(0.2);
+      } else {
+        if (nextIncrement >= 1) {
+          increment += incrementSpeed[this.risk] / difficultyMult;
+          nextIncrement = difficultyMult;
+        } else {
+          nextIncrement += difficultyMult;
+        }
+        let nextNumber = 0.2 + increment;
+        console.log(i, increment);
+        multipliers.push(parseFloat(nextNumber.toFixed(1)));
+        multipliers.unshift(parseFloat(nextNumber.toFixed(1)));
+      }
     }
     return multipliers;
   }

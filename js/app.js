@@ -21,8 +21,6 @@ game.setPegs();
 game.setBaskets();
 credit.innerText = "Credit: " + game.total;
 
-console.log(canvas.clientWidth, canvas.clientHeight);
-
 document.addEventListener("keypress", spawnBall);
 
 toggleAutoPlay.addEventListener("click", autoplay);

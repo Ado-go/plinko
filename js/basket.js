@@ -20,7 +20,7 @@ class Basket {
     let color = "rgb(0,0,0)";
     if (multiplier <= 1) {
       color = "rgb( " + 85 * multiplier + ", " + 245 + ", 32)";
-    } else if (multiplier <= 10) {
+    } else if (multiplier <= 4) {
       color = "rgb( " + 85 + 20 * multiplier + ", " + 245 + ", 32)";
     } else {
       color = "rgb(245, 64, 32)";
