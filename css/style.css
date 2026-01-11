@@ -10,7 +10,6 @@ canvas {
 }
 
 #settings {
-  width: 100%;
   min-width: 456px;
   display: flex;
   gap: 40px;
