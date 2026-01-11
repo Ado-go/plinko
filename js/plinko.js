@@ -73,11 +73,9 @@ class Plinko {
   drawRecord(record) {
     this.drawRectangle(record);
     this.ctx.fillStyle = "white";
-    ctx.font = "8px Arial";
+    ctx.font = "10px Arial";
     ctx.fillText(
-      "BET: " +
-        record.ballCost +
-        "   PAYOUT: " +
+      "   PAYOUT: " +
         record.basketMultiplier +
         "   PROFIT: " +
         parseFloat(
