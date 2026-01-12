@@ -48,6 +48,10 @@ canvas {
   cursor: pointer;
 }
 
+#credit {
+  width: 60px;
+}
+
 @media (max-width: 768px) {
   #container {
     padding: 5px;

@@ -63,7 +63,7 @@ function update() {
 }
 
 function spawnBall(event) {
-  if (event.code == "Space" || (event.button == 0 && game.autoplay == null)) {
+  if ((event.code == "Space" || event.button == 0) && game.autoplay == null) {
     game.spawnBall();
   }
 }
@@ -74,9 +74,11 @@ function autoplay() {
     game.autoplay = setInterval(startAutoplay, 1000);
     ballCost.disabled = true;
     numberOFAutoplay.disabled = true;
+    spinInput.disabled = true;
   } else {
     toggleAutoPlay.innerText = "►";
     game.resetAutoplay();
+    spinInput.disabled = false;
   }
 }
 

@@ -29,6 +29,8 @@
           type="number"
           value="0"
           min="0"
+          step="1"
+          oninput="this.value = Math.round(this.value)"
           max="10000"
         />
         <button id="toggleAutoPlay">►</button>
