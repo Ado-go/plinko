@@ -5,6 +5,7 @@ let numberOFAutoplay = document.getElementById("numberOFAutoplay");
 let toggleAutoPlay = document.getElementById("toggleAutoPlay");
 let riskInput = document.getElementById("riskInput");
 let rowsInput = document.getElementById("rowsInput");
+let spinInput = document.getElementById("spin");
 let ctx = canvas.getContext("2d");
 
 const containerWidth = parseInt(
@@ -29,6 +30,8 @@ game.setBaskets();
 credit.innerText = "Credit: " + game.total;
 
 document.addEventListener("keypress", spawnBall);
+
+spinInput.addEventListener("click", spawnBall);
 
 toggleAutoPlay.addEventListener("click", autoplay);
 
@@ -60,7 +63,7 @@ function update() {
 }
 
 function spawnBall(event) {
-  if (event.code == "Space" && game.autoplay == null) {
+  if (event.code == "Space" || (event.button == 0 && game.autoplay == null)) {
     game.spawnBall();
   }
 }

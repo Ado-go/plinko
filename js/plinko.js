@@ -173,7 +173,6 @@ class Plinko {
           nextIncrement += difficultyMult;
         }
         let nextNumber = 0.2 + increment;
-        console.log(i, increment);
         multipliers.push(parseFloat(nextNumber.toFixed(1)));
         multipliers.unshift(parseFloat(nextNumber.toFixed(1)));
       }

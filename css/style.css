@@ -40,6 +40,14 @@ canvas {
   width: 50px;
 }
 
+#spin {
+  width: 60px;
+  height: 60px;
+  font-size: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   #container {
     padding: 5px;
